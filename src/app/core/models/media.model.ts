@@ -2,7 +2,7 @@ import { MediaDetailsModel } from './MediaDetailsModel';
 import { LinkModel } from './link.model';
 
 
-export class MediaModel {
+export interface MediaModel {
   id: any;
   date: Date;
   date_gmt: Date;

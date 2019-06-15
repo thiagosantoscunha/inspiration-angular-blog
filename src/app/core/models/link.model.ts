@@ -1,4 +1,4 @@
-export class LinkModel {
+export interface LinkModel {
   self: Array<{
     href: string;
   }>;

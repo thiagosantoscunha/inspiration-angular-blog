@@ -1,0 +1,19 @@
+    <article>
+      <figure>
+        <img src="{{featureMedia?.guid?.rendered}}" class="img-fluid" alt="{{featureMedia?.alt_text}}" title="{{featureMedia?.title?.rendered}}">
+      </figure>
+        <h2 class="title-article">{{ stickyPost?.title.rendered }}</h2>
+        <div class="resume" [innerHTML]="stickyPost?.excerpt.rendered">
+        </div>
+        <div class="credit-article">
+          <div class="d-flex flex-row justify-content-center">
+            <h6 class="mr-3">Autor: {{ featureAuthor?.name }}</h6>
+            <h6 class=ml-3>Data: {{ stickyPost?.modified | date : 'dd/MM/yyyy': 'pt-BR'}}</h6>
+          </div>
+        </div>
+        <div class="mt-3">
+          <button class="btn btn-danger" [routerLink]="['/artigos', stickyPost?.id]">Leia mais</button>
+        </div>
+    </article>
+
+

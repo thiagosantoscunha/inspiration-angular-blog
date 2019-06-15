@@ -1,1 +1,10 @@
 <app-header-page [title]="pageName"></app-header-page>
+<article>
+  <figure class="text-center mt-5">
+    <img [src]="post?.media?.guid.rendered" alt="{{ post?.media?.alt_text }}" title="{{ post?.media?.title.rendered }}" class="img-fuid">
+  </figure>
+  <div class="container">
+    <div [innerHTML]="post?.content.rendered"></div>
+  </div>
+
+</article>

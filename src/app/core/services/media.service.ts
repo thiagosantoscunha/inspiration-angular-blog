@@ -8,12 +8,16 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class MediaService {
 
-  private baseUrl: string = 'http://altmakerpro.com/wp-json/wp/v2';
+  private baseUrl: string = 'http://altmakerpro.com/wp-json/wp/v2/media';
 
   constructor(private _http: HttpClient) { }
 
   public getBySlug(slug: string = 'logotipo'): Observable<MediaModel> {
-    return this._http.get<MediaModel>(`${this.baseUrl}/media?slug=${slug}`);
+    return this._http.get<MediaModel>(`${this.baseUrl}?slug=${slug}`);
+  }
+
+  public getById(id: any): Observable<MediaModel> {
+    return this._http.get<MediaModel>(`${this.baseUrl}/${id}`);
   }
 
 }

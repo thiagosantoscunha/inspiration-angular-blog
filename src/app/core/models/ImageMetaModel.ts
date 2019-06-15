@@ -1,4 +1,4 @@
-export class ImageMetaModel {
+export interface ImageMetaModel {
 
   aperture: string;
   credit: string;
