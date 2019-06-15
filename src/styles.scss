@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/main.scss';
+
+breadcrumb {
+  .container {
+    width: unset;
+    padding-right: unset;
+    padding-left: unset;
+    margin-right: unset;
+    margin-left: unset;
+  }
+  .container-fluid {
+    width: unset;
+    padding-right: unset;
+    padding-left: unset;
+    margin-right: unset;
+    margin-left: unset;
+  }
+
+  .fluid-bread {
+    background-color: unset !important;
+  }
+  .breadcrumb {
+    display: unset;
+    flex-wrap: unset;
+    padding: unset;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: unset;
+    border-radius: 0.25rem;
+  }
+}
