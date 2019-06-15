@@ -1,4 +1,4 @@
-import { ImageMetaModel } from './image-meta.model';
+import { ImageMetaModel } from './ImageMetaModel';
 
 export class MediaDetailsModel {
   width: number;

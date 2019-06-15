@@ -1,4 +1,4 @@
-import { MediaDetailsModel } from './media-details.model';
+import { MediaDetailsModel } from './MediaDetailsModel';
 import { LinkModel } from './link.model';
 
 

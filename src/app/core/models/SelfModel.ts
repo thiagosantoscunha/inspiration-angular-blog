@@ -1,3 +1,3 @@
-sexport interface SelfModel {
+export interface SelfModel {
   href: string;
 }
