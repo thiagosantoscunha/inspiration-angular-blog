@@ -5,6 +5,7 @@ import { BlogComponent } from './blog/blog.component';
 import { HeaderPageModule } from '../shared/header-page/header-page.module';
 import { ArticleModule } from './article/article.module';
 import { FeaturePostModule } from './blog/feature-post/feature-post.module';
+import { MetadataPostModule } from '../shared/metadata-post/metadata-post.module';
 
 @NgModule({
   declarations: [AboutComponent, BlogComponent],
@@ -12,7 +13,8 @@ import { FeaturePostModule } from './blog/feature-post/feature-post.module';
     CommonModule,
     HeaderPageModule,
     ArticleModule,
-    FeaturePostModule
+    FeaturePostModule,
+    MetadataPostModule
   ],
   exports: [AboutComponent, BlogComponent],
 })
