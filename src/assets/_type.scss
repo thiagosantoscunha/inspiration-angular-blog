@@ -3,3 +3,30 @@
 h1, h2, h3, h4, h5, h6, p {
   font-family: 'Open Sans', sans-serif !important;
 }
+
+article {
+  .container {
+    max-width: 750px;
+  }
+  .content {
+    p {
+      font-size: 1.5rem;
+      font-weight: 100;
+      letter-spacing: 0.08rem;
+      line-height: 2.5rem;
+    }
+  }
+  .title-area {
+    h1 {
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    p {
+      color: rgb(100, 100, 100);
+    }
+    padding: {
+      top: 50px;
+      bottom: 50px;
+    }
+  }
+}
