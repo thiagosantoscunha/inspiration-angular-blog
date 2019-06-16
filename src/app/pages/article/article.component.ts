@@ -34,7 +34,6 @@ export class ArticleComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.postService.getById(id).subscribe((post: PostModel) => {
       this.post = post;
-      console.log(this.post);
       this.pageName = this.post.title.rendered;
       this.title.setTitle(`Alt Maker Pro - ${this.pageName}`);
       this.getPostImageById();

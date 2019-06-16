@@ -5,6 +5,7 @@ import { HeaderPageModule } from 'src/app/shared/header-page/header-page.module'
 import { RouterModule } from '@angular/router';
 import { MetadataPostModule } from 'src/app/shared/metadata-post/metadata-post.module';
 import { CloudTagsModule } from 'src/app/shared/cloud-tags/cloud-tags.module';
+import { CloudCategoriesModule } from 'src/app/shared/cloud-categories/cloud-categories.module';
 
 @NgModule({
   declarations: [ArticleComponent],
@@ -13,7 +14,8 @@ import { CloudTagsModule } from 'src/app/shared/cloud-tags/cloud-tags.module';
     HeaderPageModule,
     RouterModule,
     MetadataPostModule,
-    CloudTagsModule
+    CloudTagsModule,
+    CloudCategoriesModule
   ]
 })
 export class ArticleModule { }
