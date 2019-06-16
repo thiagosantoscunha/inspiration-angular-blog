@@ -1,9 +1,18 @@
 article {
-  figure {
-    img {
-      border: {
-        radius: 5px;
-      }
-    }
+  .bg-blend {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
   }
+  .demo > div {
+    float: left;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+  }
+  .demo {
+    background-color: black;
+    width: 100%;
+    overflow: hidden;
+  }
+
 }
