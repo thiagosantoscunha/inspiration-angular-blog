@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterContentChecked, AfterViewChecked, AfterContentInit, DoCheck, OnChanges } from '@angular/core';
 import { TagModel } from 'src/app/core/models/TagModel';
 import { TagService } from 'src/app/core/services/tag.service';
 
@@ -7,17 +7,16 @@ import { TagService } from 'src/app/core/services/tag.service';
   templateUrl: './cloud-tags.component.html',
   styleUrls: ['./cloud-tags.component.scss']
 })
-export class CloudTagsComponent implements OnInit {
+export class CloudTagsComponent implements OnChanges {
 
   @Input()
   public tagIds: Array<number> = [];
 
   public tags: Array<TagModel> = [];
 
-
   constructor(private tagService: TagService) { }
 
-  ngOnInit() {
+  ngOnChanges() {
     this.getById();
   }
 
