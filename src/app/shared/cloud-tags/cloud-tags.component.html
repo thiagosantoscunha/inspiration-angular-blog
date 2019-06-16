@@ -1,0 +1,4 @@
+<div *ngIf="tags !== null && tags.length > 0">
+  <span *ngFor="let t of tags" class="badge badge-pill badge-danger ml-1">{{ t?.name }}</span>
+</div>
+
