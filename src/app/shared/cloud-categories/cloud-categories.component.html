@@ -1,0 +1,9 @@
+<div class="pt-3 pb-3">
+  <h6>Categorias: </h6>
+  <div *ngIf="categories !== null && categories.length > 0">
+    <button type="button" class="btn btn-primary mr-2" *ngFor="let c of categories">{{ c.name }} <span class="badge badge-light">{{ c.count }}</span>
+      <span class="sr-only">{{ c.description }}</span>
+    </button>
+  </div>
+</div>
+
