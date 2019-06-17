@@ -4,10 +4,21 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: 'Open Sans', sans-serif !important;
 }
 
-article {
-  .container {
-    max-width: 750px;
+h2 {
+  font: {
+    weight: 900;
+    size: 1rem;
   }
+}
+
+h4 {
+  font: {
+    weight: 700;
+    size: 1.4rem;
+  }
+}
+
+article {
   .content {
     p {
       font-size: 1.5rem;
