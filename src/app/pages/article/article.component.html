@@ -8,7 +8,7 @@
     <div class="title-area text-center">
       <h1>{{ post?.title.rendered }}</h1>
       <div [innerHTML]="post?.excerpt.rendered" *ngIf="!post?.excerpt.protected"></div>
-      <app-metadata-post [author]="author" [date]="post?.date"></app-metadata-post>
+      <app-metadata-post [authorId]="post?.author" [date]="post?.date" [alignItems]="'center'"></app-metadata-post>
       <app-cloud-tags [tagIds]="post?.tags"></app-cloud-tags>
     </div>
     <div [innerHTML]="post?.content.rendered" class="content"></div>

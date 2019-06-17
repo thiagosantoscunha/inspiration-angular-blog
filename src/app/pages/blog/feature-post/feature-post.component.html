@@ -5,7 +5,9 @@
     <h2 class="title-article">{{ stickyPost?.title.rendered }}</h2>
     <div class="resume" [innerHTML]="stickyPost?.excerpt.rendered">
     </div>
-    <app-metadata-post [author]="featureAuthor" [date]="stickyPost?.date"></app-metadata-post>
+    <div>
+      <app-metadata-post [authorId]="stickyPost?.author" [date]="stickyPost?.date" [alignItems]="'center'"></app-metadata-post>
+    </div>
     <div class="mt-3">
       <button class="btn btn-danger" [routerLink]="['/artigos', stickyPost?.id]">Leia mais</button>
     </div>

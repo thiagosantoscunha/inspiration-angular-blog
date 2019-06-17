@@ -25,8 +25,7 @@ export class ArticleComponent implements OnInit {
     private sanitizer: DomSanitizer,
     private route: ActivatedRoute,
     private postService: PostService,
-    private mediaSerive: MediaService,
-    private authorService: AuthorService
+    private mediaSerive: MediaService
   ) {
   }
 
@@ -37,18 +36,11 @@ export class ArticleComponent implements OnInit {
       this.pageName = this.post.title.rendered;
       this.title.setTitle(`Alt Maker Pro - ${this.pageName}`);
       this.getPostImageById();
-      this.getAuthorById();
     });
   }
 
   public getfeatureImage(image: string) {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${image})`);
-  }
-
-  public getAuthorById() {
-    this.authorService.getById(this.post.author).subscribe((author: AuthorModel) => {
-      this.author = author != null ? author : null;
-    });
   }
 
   getPostImageById(): void {
