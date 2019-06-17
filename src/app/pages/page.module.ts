@@ -7,6 +7,7 @@ import { ArticleModule } from './article/article.module';
 import { FeaturePostModule } from './blog/feature-post/feature-post.module';
 import { MetadataPostModule } from '../shared/metadata-post/metadata-post.module';
 import { LastestPostsModule } from '../shared/lastest-posts/lastest-posts.module';
+import { FeatureBlockModule } from '../components/feature-block/feature-block.module';
 
 @NgModule({
   declarations: [AboutComponent, BlogComponent],
@@ -16,7 +17,8 @@ import { LastestPostsModule } from '../shared/lastest-posts/lastest-posts.module
     ArticleModule,
     FeaturePostModule,
     MetadataPostModule,
-    LastestPostsModule
+    LastestPostsModule,
+    FeatureBlockModule
   ],
   exports: [AboutComponent, BlogComponent],
 })

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PostModel } from '../models/post.model';
 import { Observable } from 'rxjs';
+import { CategoryModel } from '../models/CategoryModel';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,10 @@ export class PostService {
 
   public getPostWithLimit(limit: number, order: string = 'asc'): Observable<PostModel[]> {
     return this.http.get<PostModel[]>(`${this.baseUrl}?per_page=${limit}&order=${order}`);
+  }
+
+  public getByCategoryId(categoryId: any): Observable<PostModel[]> {
+    return this.http.get<PostModel[]>(`${this.baseUrl}?categories=${categoryId}`);
   }
 
 }

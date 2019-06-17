@@ -5,7 +5,7 @@ import { ExcerptModel } from './ExcerptModel';
 import { LinksModel } from './LinksModel';
 import { MediaModel } from './media.model';
 
-export interface PostModel {
+export class PostModel {
   id: number;
   date: Date;
   date_gmt: Date;

@@ -18,4 +18,12 @@ export class CategoryService {
     return this.http.get<CategoryModel>(`${this.baseUrl}/${id}`);
   }
 
+  public getByName(name: string, limit: number = 1): Observable<CategoryModel> {
+    return this.http.get<CategoryModel>(`${this.baseUrl}?name=${name}&per_page=${limit}`);
+  }
+
+  public getBySlug(name: string, limit: number = 1): Observable<CategoryModel[]> {
+    return this.http.get<CategoryModel[]>(`${this.baseUrl}?slug=${name}`);
+  }
+
 }
