@@ -1,0 +1,27 @@
+<section>
+  <div class="row mt-5">
+    <div class="col-12">
+      <h2>Últimas Postagens</h2>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6" *ngFor="let p of recentPosts">
+      <div class="card">
+        <div class="">
+          <figure [routerLink]="['/artigos', p?.id]">
+            <img
+              class="img-fluid"
+              [src]="p?.media?.guid?.rendered"
+              alt="{{ p?.media?.alt_text }}"
+              title="{{ p?.media?.title?.rendered }}">
+          </figure>
+          <div class="content-area">
+            <h4 [routerLink]="['/artigos', p?.id]">{{ p?.title?.rendered}}</h4>
+            <app-metadata-post [authorId]="p?.author" [date]="p?.date" [alignItems]="'left'"></app-metadata-post>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

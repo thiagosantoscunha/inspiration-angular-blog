@@ -22,4 +22,8 @@ export class PostService {
     return this.http.get<PostModel>(`${this.baseUrl}/${id}`);
   }
 
+  public getPostWithLimit(limit: number, order: string = 'asc'): Observable<PostModel[]> {
+    return this.http.get<PostModel[]>(`${this.baseUrl}?per_page=${limit}&order=${order}`);
+  }
+
 }
