@@ -1,0 +1,16 @@
+.card {
+  padding: {
+    top: 20px;
+    bottom: 20px;
+    left: 30px;
+    right: 30px;
+  }
+  margin: {
+    left: -30px;
+    right: -30px;
+  }
+  border: 0;
+  &:hover {
+    background: rgb(250,250,250);
+  }
+}

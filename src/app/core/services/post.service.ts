@@ -15,6 +15,10 @@ export class PostService {
     this.baseUrl = 'http://altmakerpro.com/wp-json/wp/v2/posts';
   }
 
+  public getAll(): Observable<PostModel[]> {
+    return this.http.get<PostModel[]>(`${this.baseUrl}`);
+  }
+
   public getSticky(): Observable<PostModel[]> {
     return this.http.get<PostModel[]>(`${this.baseUrl}?sticky=true`);
   }
