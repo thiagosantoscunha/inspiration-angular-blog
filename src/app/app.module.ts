@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationHeaderModule } from './shared/navigation-header/navigation-header.module';
 import { PageModule } from './pages/page.module';
+import { FooterModule } from './shared/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PageModule } from './pages/page.module';
     AppRoutingModule,
     NavigationHeaderModule,
     HttpClientModule,
-    PageModule
+    PageModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
