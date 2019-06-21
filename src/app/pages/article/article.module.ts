@@ -8,6 +8,7 @@ import { CloudTagsModule } from 'src/app/shared/cloud-tags/cloud-tags.module';
 import { CloudCategoriesModule } from 'src/app/shared/cloud-categories/cloud-categories.module';
 import { CommentListModule } from 'src/app/components/comment-list/comment-list.module';
 import { PostListModule } from 'src/app/components/post-list/post-list.module';
+import { SocialSharedModule } from 'src/app/components/social-shared/social-shared.module';
 
 @NgModule({
   declarations: [ArticleComponent],
@@ -19,7 +20,8 @@ import { PostListModule } from 'src/app/components/post-list/post-list.module';
     CloudTagsModule,
     CloudCategoriesModule,
     CommentListModule,
-    PostListModule
+    PostListModule,
+    SocialSharedModule
   ]
 })
 export class ArticleModule { }
