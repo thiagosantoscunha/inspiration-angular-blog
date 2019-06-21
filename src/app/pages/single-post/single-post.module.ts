@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArticleComponent } from './article.component';
+import { SinglePostComponent } from './single-post.component';
 import { HeaderPageModule } from 'src/app/shared/header-page/header-page.module';
 import { RouterModule } from '@angular/router';
 import { MetadataPostModule } from 'src/app/shared/metadata-post/metadata-post.module';
@@ -11,7 +11,7 @@ import { PostListModule } from 'src/app/components/post-list/post-list.module';
 import { SocialSharedModule } from 'src/app/components/social-shared/social-shared.module';
 
 @NgModule({
-  declarations: [ArticleComponent],
+  declarations: [SinglePostComponent],
   imports: [
     CommonModule,
     HeaderPageModule,
@@ -24,4 +24,4 @@ import { SocialSharedModule } from 'src/app/components/social-shared/social-shar
     SocialSharedModule
   ]
 })
-export class ArticleModule { }
+export class SinglePostModule { }

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { HeaderPageModule } from '../shared/header-page/header-page.module';
-import { ArticleModule } from './article/article.module';
+import { SinglePostModule } from './single-post/single-post.module';
 import { FeaturePostModule } from './blog/feature-post/feature-post.module';
 import { MetadataPostModule } from '../shared/metadata-post/metadata-post.module';
 import { LastestPostsModule } from '../shared/lastest-posts/lastest-posts.module';
@@ -17,7 +17,7 @@ import { UserModule } from './user/user.module';
   imports: [
     CommonModule,
     HeaderPageModule,
-    ArticleModule,
+    SinglePostModule,
     FeaturePostModule,
     MetadataPostModule,
     LastestPostsModule,

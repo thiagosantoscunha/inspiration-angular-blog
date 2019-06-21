@@ -10,11 +10,11 @@ import { AuthorService } from 'src/app/core/services/author.service.';
 import { AuthorModel } from 'src/app/core/models/AuthorModel';
 
 @Component({
-  selector: 'app-article',
-  templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss']
+  selector: 'app-single-post',
+  templateUrl: './single-post.component.html',
+  styleUrls: ['./single-post.component.scss']
 })
-export class ArticleComponent implements OnInit {
+export class SinglePostComponent implements OnInit {
 
   public pageName: string;
   public post: PostModel;

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BlogComponent } from './pages/blog/blog.component';
 import { AboutComponent } from './pages/about/about.component';
-import { ArticleComponent } from './pages/article/article.component';
+import { SinglePostComponent } from './pages/single-post/single-post.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { UserComponent } from './pages/user/user.component';
 
@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'artigos/:id',
-    component: ArticleComponent,
+    component: SinglePostComponent,
     data: {
       breadcrumb: 'Artigos'
     }
