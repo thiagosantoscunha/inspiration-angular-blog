@@ -13,7 +13,16 @@
     </div>
     <div [innerHTML]="post?.content.rendered" class="content"></div>
     <hr class="mt-5">
-    <app-cloud-categories [categoriesIds]="post?.categories"></app-cloud-categories>
+    <section>
+      <app-cloud-categories [categoriesIds]="post?.categories"></app-cloud-categories>
+    </section>
+    <section class="mt-5">
+      <h4>Artigos relacionados</h4>
+      <app-post-list [relatedPosts]="post?.categories" [postReferenceId]="post?.id"></app-post-list>
+    </section>
+    <section>
+      <app-comment-list [idPost]="post?.id"></app-comment-list>
+    </section>
   </div>
 
 </article>

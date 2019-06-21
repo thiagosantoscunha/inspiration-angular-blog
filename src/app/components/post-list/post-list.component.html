@@ -1,9 +1,12 @@
 <hr>
-<div class="card mt-5" *ngFor="let p of posts">
+<p class="alert alert-warning" *ngIf="!posts?.length">
+  Ops! Não temos nenhuma postagem relacionada.
+</p>
+<div class="card mt-3" *ngFor="let p of posts">
   <div class="card-body">
     <h3>{{ p.title.rendered }}</h3>
-    <app-metadata-post [authorId]="p.author" [date]="p.date"></app-metadata-post>
-    <div [innerHTML]="p.excerpt.rendered"></div>
-    <button class="btn btn-danger btn-sm" [routerLink]="['/artigos', p.id]" routerLinkActive="router-link-active" >Leia mais</button>
+    <app-metadata-post [authorId]="p?.author" [date]="p?.date"></app-metadata-post>
+    <div [innerHTML]="p?.excerpt.rendered"></div>
+    <button class="btn btn-danger btn-sm" (click)="goToArticle(p?.id)">Leia mais</button>
   </div>
 </div>

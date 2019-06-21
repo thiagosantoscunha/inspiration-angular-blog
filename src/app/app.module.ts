@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import { DisqusModule, DISQUS_SHORTNAME } from 'ngx-disqus';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,9 +19,15 @@ import { FooterModule } from './shared/footer/footer.module';
     NavigationHeaderModule,
     HttpClientModule,
     PageModule,
-    FooterModule
+    FooterModule,
+    DisqusModule.forRoot('ngx'),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: DISQUS_SHORTNAME,
+      useValue: 'altmakerpro'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

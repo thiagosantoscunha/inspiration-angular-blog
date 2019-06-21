@@ -27,12 +27,17 @@ export class PostService {
     return this.http.get<PostModel>(`${this.baseUrl}/${id}`);
   }
 
-  public getPostWithLimit(limit: number, order: string = 'asc'): Observable<PostModel[]> {
+  public getPostWithLimit(limit: number, order: string = 'desc'): Observable<PostModel[]> {
     return this.http.get<PostModel[]>(`${this.baseUrl}?per_page=${limit}&order=${order}`);
   }
 
   public getByCategoryId(categoryId: any): Observable<PostModel[]> {
     return this.http.get<PostModel[]>(`${this.baseUrl}?categories=${categoryId}`);
+  }
+
+  public getByCategories(categoriesIds: any[]): Observable<PostModel[]> {
+    console.log(`${this.baseUrl}?categories=${categoriesIds}`);
+    return this.http.get<PostModel[]>(`${this.baseUrl}?categories=${categoriesIds}`);
   }
 
 }

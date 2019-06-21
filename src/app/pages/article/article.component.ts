@@ -31,6 +31,7 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
     this.postService.getById(id).subscribe((post: PostModel) => {
       this.post = post;
       this.pageName = this.post.title.rendered;
