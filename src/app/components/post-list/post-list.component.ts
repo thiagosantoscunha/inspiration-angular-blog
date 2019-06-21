@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { PostModel } from 'src/app/core/models/post.model';
 import { PostService } from 'src/app/core/services/post.service';
-import { CategoryModel } from 'src/app/core/models/CategoryModel';
-import { runInThisContext } from 'vm';
 import { Router } from '@angular/router';
+import { Title, EventManager } from '@angular/platform-browser';
+import { AuthorModel } from 'src/app/core/models/AuthorModel';
 
 @Component({
   selector: 'app-post-list',
@@ -21,18 +21,30 @@ export class PostListComponent implements OnChanges {
   @Input()
   public postReferenceId: any;
 
-  public posts: Array<PostModel>;
+  @Input()
+  public display: boolean;
+
+  @Input()
+  public posts: Array<PostModel> = [];
+
+  public showButton = -1;
+
 
   constructor(private postService: PostService, private router: Router) {
     this.category = '';
+    this.display = false;
   }
 
   ngOnChanges() {
-    if (this.category === 'all') {
-      this.getAll();
+    if (this.posts.length > 0) {
       return;
+    } else {
+      if (this.category === 'all') {
+        this.getAll();
+        return;
+      }
+      this.getByCategories();
     }
-    this.getByCategories();
   }
 
   public getAll(): void {
@@ -55,6 +67,10 @@ export class PostListComponent implements OnChanges {
     this.router.navigateByUrl('/artigos', { skipLocationChange: true }).then(() => {
       this.router.navigate(['/artigos', id]);
     });
+  }
+
+  public toggleShowButton(index: number): void {
+    this.showButton = index;
   }
 
 }

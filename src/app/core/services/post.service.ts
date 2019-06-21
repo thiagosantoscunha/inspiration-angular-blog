@@ -36,8 +36,11 @@ export class PostService {
   }
 
   public getByCategories(categoriesIds: any[]): Observable<PostModel[]> {
-    console.log(`${this.baseUrl}?categories=${categoriesIds}`);
     return this.http.get<PostModel[]>(`${this.baseUrl}?categories=${categoriesIds}`);
+  }
+
+  public getByAuthor(authorId: any[]): Observable<PostModel[]> {
+    return this.http.get<PostModel[]>(`${this.baseUrl}?author=${authorId}`);
   }
 
 }

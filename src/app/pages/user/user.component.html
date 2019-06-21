@@ -1,0 +1,7 @@
+<app-header-page [title]="pageName"></app-header-page>
+<section class="container mt-5">
+  <h4 *ngIf="posts.length > 0">Encontramos {{ posts.length }} <span *ngIf="posts.length > 0">artigos </span> <span *ngIf="posts.length === 1">artigo </span> {{ author?.name }}</h4>
+  <h4 *ngIf="posts.length === 0">Não encontramos nenhum artigo para {{ author.name }}</h4>
+  <p>{{ author?.description }}</p>
+  <app-post-list [posts]="posts" [display]="true"></app-post-list>
+</section>

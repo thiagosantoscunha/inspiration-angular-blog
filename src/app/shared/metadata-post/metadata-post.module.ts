@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MetadataPostComponent } from './metadata-post.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [MetadataPostComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [MetadataPostComponent],
 })

@@ -1,0 +1,6 @@
+<app-header-page [title]="pageName"></app-header-page>
+<section class="container mt-5">
+  <h4>Você tem {{ category?.count }} para categoria {{ category?.name }}</h4>
+  <p>{{ category?.description }}</p>
+  <app-post-list [relatedPosts]="idCategoryList" [display]="true"></app-post-list>
+</section>

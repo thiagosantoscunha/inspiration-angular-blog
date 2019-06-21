@@ -1,6 +1,6 @@
 <div class="credit-article">
   <div class="d-flex flex-row justify-content-{{ alignItems }}">
-    <h6 class="mr-2">Autor: <a href="{{ author?.link }}" target="_blank">{{ author?.name }}</a></h6>
+    <h6 class="mr-2">Autor: <a href [routerLink]="['/autor', author?.id]">{{ author?.name }}</a></h6>
     <h6 class=ml-2>Data: {{ date | date : 'dd/MM/yyyy' }}</h6>
   </div>
 </div>

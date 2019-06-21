@@ -1,13 +1,14 @@
 <app-header-page [title]="pageName"></app-header-page>
 <div class="container">
-  <div class="text-center">
+  <section class="text-center">
     <app-feature-post></app-feature-post>
-  </div>
+  </section>
   <app-lastest-posts></app-lastest-posts>
   <div class="mt-5">
     <app-feature-block-horizon></app-feature-block-horizon>
   </div>
   <section class="mt-5">
+    <h4>Todas as postagens</h4>
     <app-post-list [category]="'all'"></app-post-list>
   </section>
 </div>
