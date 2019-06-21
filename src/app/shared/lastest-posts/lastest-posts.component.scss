@@ -13,16 +13,18 @@ figure {
   padding-top: 66.66%;
   position: relative;
   overflow: hidden;
+  border: {
+    radius: 5px;
+  }
   img {
+    object-fit: cover;
     position: absolute;
     width: 100%;
+    height: 320px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    border: {
-      radius: 5px;
-    }
     &:hover {
       filter: grayscale(90%);
       -webkit-filter: grayscale(90%);

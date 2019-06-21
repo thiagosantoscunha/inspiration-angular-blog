@@ -4,7 +4,7 @@
 </p>
 <div class="card mt-3" *ngFor="let p of posts">
   <div class="card-body">
-    <h3>{{ p.title.rendered }}</h3>
+    <h3 (click)="goToArticle(p?.id)">{{ p.title.rendered }}</h3>
     <app-metadata-post [authorId]="p?.author" [date]="p?.date"></app-metadata-post>
     <div [innerHTML]="p?.excerpt.rendered"></div>
     <button class="btn btn-danger btn-sm" (click)="goToArticle(p?.id)">Leia mais</button>
