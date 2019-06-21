@@ -1,10 +1,9 @@
 <article *ngIf="stickyPost?.sticky">
-  <figure>
+  <figure [routerLink]="['/artigos', stickyPost?.id]">
     <img src="{{featureMedia?.guid?.rendered}}" class="img-fluid" alt="{{featureMedia?.alt_text}}" title="{{featureMedia?.title?.rendered}}">
   </figure>
-    <h2 class="title-article">{{ stickyPost?.title.rendered }}</h2>
-    <div class="resume" [innerHTML]="stickyPost?.excerpt.rendered">
-    </div>
+    <h2 class="title-article" [routerLink]="['/artigos', stickyPost?.id]">{{ stickyPost?.title.rendered }}</h2>
+    <div class="resume" [innerHTML]="stickyPost?.excerpt.rendered"></div>
     <div>
       <app-metadata-post [authorId]="stickyPost?.author" [date]="stickyPost?.date" [alignItems]="'center'"></app-metadata-post>
     </div>

@@ -1,0 +1,26 @@
+article {
+  margin: {
+    top: 50px;
+  }
+  figure {
+    img {
+      border: {
+        radius: 5px;
+      }
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  h2 {
+    font: {
+      size: 2rem;
+    }
+    text-transform: uppercase;
+    &:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
