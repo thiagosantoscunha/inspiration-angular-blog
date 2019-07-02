@@ -1,5 +1,5 @@
-<header>
-  <app-navigation-header></app-navigation-header>
+<header *ngIf="hasMenu$ | async as hasMenu">
+  <app-navigation-header *ngIf="hasMenu"></app-navigation-header>
 </header>
 <main>
   <router-outlet></router-outlet>

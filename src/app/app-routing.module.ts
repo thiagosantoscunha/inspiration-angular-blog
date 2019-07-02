@@ -5,29 +5,38 @@ import { AboutComponent } from './pages/about/about.component';
 import { SinglePostComponent } from './pages/single-post/single-post.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { UserComponent } from './pages/user/user.component';
+import { SalesLetterPageComponent } from './pages/sales-letter-page/sales-letter-page.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/artigos',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
-    path: 'artigos',
+    path: 'home',
+    component: HomeComponent,
+    data: {
+      breadcrumb: 'Home'
+    }
+  },
+  {
+    path: 'blog',
     component: BlogComponent,
     data: {
       breadcrumb: 'Artigos'
     }
   },
   {
-    path: 'artigos/:id',
+    path: 'blog/:slug',
     component: SinglePostComponent,
     data: {
       breadcrumb: 'Artigos'
     }
   },
   {
-    path: 'artigos/categoria/:categoryId',
+    path: 'blog/categoria/:categoryId',
     component: CategoryComponent,
     data: {
       breadcrumb: 'Categorias'
@@ -45,6 +54,13 @@ const routes: Routes = [
     component: AboutComponent,
     data: {
       breadcrumb: 'Sobre'
+    }
+  },
+  {
+    path: 'carta/:slug',
+    component: SalesLetterPageComponent,
+    data: {
+      breadcrumb: 'Carta'
     }
   },
 ];

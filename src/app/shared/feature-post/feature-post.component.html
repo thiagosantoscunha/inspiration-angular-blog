@@ -1,14 +1,14 @@
 <article *ngIf="stickyPost?.sticky">
-  <figure [routerLink]="['/artigos', stickyPost?.id]">
+  <figure [routerLink]="['/blog', stickyPost?.slug]">
     <img src="{{featureMedia?.guid?.rendered}}" class="img-fluid" alt="{{featureMedia?.alt_text}}" title="{{featureMedia?.title?.rendered}}">
   </figure>
-    <h2 class="title-article" [routerLink]="['/artigos', stickyPost?.id]">{{ stickyPost?.title.rendered }}</h2>
+    <h2 class="title-article" [routerLink]="['/blog', stickyPost?.slug]">{{ stickyPost?.title.rendered }}</h2>
     <div class="resume" [innerHTML]="stickyPost?.excerpt.rendered"></div>
     <div>
       <app-metadata-post [authorId]="stickyPost?.author" [date]="stickyPost?.date" [alignItems]="'center'"></app-metadata-post>
     </div>
     <div class="mt-3">
-      <button class="btn btn-danger" [routerLink]="['/artigos', stickyPost?.id]">Leia mais</button>
+      <button class="btn btn-danger" [routerLink]="['/blog', stickyPost?.slug]">Leia mais</button>
     </div>
 </article>
 

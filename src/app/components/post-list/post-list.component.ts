@@ -63,9 +63,9 @@ export class PostListComponent implements OnChanges {
     });
   }
 
-  public goToArticle(id: any) {
-    this.router.navigateByUrl('/artigos', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['/artigos', id]);
+  public goToArticle(slug: any) {
+    this.router.navigateByUrl('/blog', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/blog', slug]);
     });
   }
 

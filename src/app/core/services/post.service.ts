@@ -2,17 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PostModel } from '../models/post.model';
 import { Observable } from 'rxjs';
-import { CategoryModel } from '../models/CategoryModel';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
-  private baseUrl: string;
+  private baseUrl = environment.baseUrl;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://altmakerpro.com/wp-json/wp/v2/posts';
+    this.baseUrl += '/posts';
   }
 
   public getAll(): Observable<PostModel[]> {
@@ -41,6 +41,10 @@ export class PostService {
 
   public getByAuthor(authorId: any[]): Observable<PostModel[]> {
     return this.http.get<PostModel[]>(`${this.baseUrl}?author=${authorId}`);
+  }
+
+  getBySlug(slug: string): Observable<PostModel[]> {
+    return this.http.get<PostModel[]>(`${this.baseUrl}?slug=${slug}`);
   }
 
 }

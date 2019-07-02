@@ -1,0 +1,226 @@
+@import 'https://use.fontawesome.com/releases/v5.8.1/css/all.css';
+
+$info: #17a2b8;
+$danger: #dc3545;
+
+section.teachers {
+  padding: 50px 100px;
+}
+
+section.how-it-works {
+  color: white;
+  padding: 50px;
+  background: {
+    repeat: no-repeat;
+    size: cover;
+  }
+  object-fit: cover;
+  .card {
+    color: black;
+    .card-body {
+      padding: 40px;
+      ul {
+        padding: 10px;
+        li {
+          padding: 10px;
+          list-style-type: none;
+          &:before {
+            color: $info;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f00c"; /* FontAwesome Unicode */
+            display: inline-block;
+            margin-left: -1.3em; /* same as padding-left set on li */
+            width: 1.3em;
+          }
+        }
+      }
+      h3 {
+        font: {
+          size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+section.faq {
+  padding: 20px;
+  h2 {
+    font: {
+      weight: 300;
+    }
+    text-transform: uppercase;
+  }
+}
+
+
+section.testemony {
+  color: white;
+  padding: 50px;
+  .card {
+    color: black;
+    .card-body {
+      padding: 20px;
+      h3 {
+        font: {
+          size: 1.4rem;
+          weight: 700;
+        }
+      }
+      p {
+        font: {
+          size: 0.8rem;
+          style: italic;
+        }
+
+      }
+    }
+  }
+}
+
+.photo-testemony {
+  padding: 25%;
+  content: '';
+  background-color: #cccccc;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* width: 30%;
+  height: 50%; */
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+
+
+
+section.price {
+  table {
+    button.btn {
+      font-size: 1rem;
+    }
+    tr {
+      th{
+        &:first-child {
+          width: 50%;
+        }
+      }
+      td {
+        i.fa-check {
+          color: $info;
+        }
+        i.fa-times {
+          color: $danger;
+        }
+      }
+      td.price {
+        text-align: center;
+        font: {
+          size: 1.5rem;
+          weight: 700;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 340px) {
+  section.desktop-show {
+    display: none;
+  }
+  section.mobile-show {
+    display: block;
+  }
+
+  section.price {
+    .card {
+      color: black;
+      .card-body {
+        padding: 40px;
+        ul {
+          padding: 10px;
+          li {
+            padding: 10px;
+            list-style-type: none;
+            &:before {
+              color: $info;
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              content: "\f00c"; /* FontAwesome Unicode */
+              display: inline-block;
+              margin-left: -1.3em; /* same as padding-left set on li */
+              width: 1.3em;
+            }
+          }
+        }
+        h3 {
+          font: {
+            size: 1.5rem;
+            weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  section.teachers {
+    padding: 20px 50px;
+  }
+  section.how-it-works {
+    .card {
+      margin: {
+        top: 10px;
+      };
+    }
+  }
+  section.testemony {
+    padding: 20px;
+    .card {
+      margin: {
+        top: 10px;
+      }
+    }
+  }
+  footer {
+    .zapzap {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: 960px;
+    max-width: 960px;
+  }
+
+  section.desktop-show {
+    display: block;
+  }
+  section.mobile-show {
+    display: none;
+  }
+  section.teachers {
+    padding: 50px 100px;
+  }
+  .how-it-works {
+    .card {
+      margin: 0;
+    }
+  }
+  section.testemony {
+    padding: 50px;
+    .card {
+      margin: {
+        top: 0;
+      }
+    }
+  }
+  footer {
+    .zapzap {
+      width: 40%;
+    }
+  }
+}

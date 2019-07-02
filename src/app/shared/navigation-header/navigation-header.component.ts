@@ -16,14 +16,6 @@ export class NavigationHeaderComponent implements OnInit {
 
   constructor(private _mediaService: MediaService) {
     this.navItems = [
-      {
-        name: 'Início',
-        slug: '/artigos'
-      },
-      {
-        name: 'Sobre',
-        slug: '/sobre'
-      }
     ];
   }
 

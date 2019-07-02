@@ -11,6 +11,8 @@ import { FeatureBlockModule } from '../components/feature-block/feature-block.mo
 import { PostListModule } from '../components/post-list/post-list.module';
 import { CategoryModule } from './category/category.module';
 import { UserModule } from './user/user.module';
+import { SalesLetterPageModule } from './sales-letter-page/sales-letter-page.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [AboutComponent, BlogComponent],
@@ -24,7 +26,9 @@ import { UserModule } from './user/user.module';
     FeatureBlockModule,
     PostListModule,
     CategoryModule,
-    UserModule
+    UserModule,
+    HomeModule,
+    SalesLetterPageModule
   ],
   exports: [AboutComponent, BlogComponent],
 })

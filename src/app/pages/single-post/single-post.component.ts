@@ -5,8 +5,6 @@ import { PostService } from 'src/app/core/services/post.service';
 import { PostModel } from 'src/app/core/models/post.model';
 import { MediaService } from 'src/app/core/services/media.service';
 import { MediaModel } from 'src/app/core/models/media.model';
-import { Utils } from 'src/app/core/utils/utils';
-import { AuthorService } from 'src/app/core/services/author.service.';
 import { AuthorModel } from 'src/app/core/models/AuthorModel';
 
 @Component({
@@ -30,11 +28,11 @@ export class SinglePostComponent implements OnInit {
   }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
-    this.postService.getById(id).subscribe((post: PostModel) => {
-      this.post = post;
-      this.pageName = this.post.title.rendered;
+    const slug = this.route.snapshot.paramMap.get('slug');
+    console.log(slug);
+    this.postService.getBySlug(slug).subscribe((posts: PostModel[]) => {
+      this.post = posts[0];
+      this.pageName = '';
       this.title.setTitle(`Alt Maker Pro - ${this.pageName}`);
       this.getPostImageById();
     });

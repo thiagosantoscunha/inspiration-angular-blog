@@ -1,0 +1,103 @@
+article {
+  .header {
+    background: {
+      size: cover;
+      repeat: no-repeat;
+    }
+    .content-header {
+      h1 {
+        font: {
+          size: 3rem;
+          weight: 900;
+        }
+        text: {
+          transform: uppercase;
+        }
+        color: white;
+      }
+    }
+  }
+  .content-body {
+    .author-area {
+      margin: {
+        top: -140px;
+      }
+      figure {
+        text-align: center;
+        img {
+          background: white;
+          object-fit: cover;
+          border: {
+            radius: 100px;
+            width: 4px;
+            style: solid;
+            color: silver;
+          }
+        }
+      }
+    }
+    margin: {
+      top: -200px;
+    }
+  }
+}
+
+div.content p {
+  margin-top: 50px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.06rem;
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 380px) {
+  .container {
+    width: unset !important;
+    max-width: unset !important;
+  }
+  article {
+    .header {
+      .content-header {
+        padding: 60px 0px 240px 0px;
+      }
+    }
+    .content-body {
+      .author-area {
+        margin: {
+          top: -70px;
+        }
+    }
+    .card {
+      .card-body {
+        padding: 30px
+      }
+    }
+  }
+
+}
+
+}
+
+@media screen and (min-width: 1023px) {
+  .container {
+    width: 960px !important;
+  }
+  article {
+    .header {
+      .content-header {
+        padding: 100px 0px 250px 0px;
+      }
+    }
+
+  }
+  .card {
+    .card-body {
+      padding: 50px !important;
+      .author-area {
+        margin: {
+          top: -100px;
+        }
+    }
+  }
+}
+}

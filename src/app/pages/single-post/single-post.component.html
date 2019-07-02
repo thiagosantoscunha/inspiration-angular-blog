@@ -1,5 +1,5 @@
 <app-header-page [title]="pageName"></app-header-page>
-<article>
+<article class="single-post">
   <div class="demo">
     <div class="bg-blend" [style.background-image]="getfeatureImage(post?.media?.guid?.rendered)">
     </div>
@@ -7,7 +7,7 @@
   <div class="container">
     <div class="title-area text-center">
       <h1>{{ post?.title.rendered }}</h1>
-      <div [innerHTML]="post?.excerpt.rendered" *ngIf="!post?.excerpt.protected"></div>
+      <div [innerHTML]="post?.excerpt.rendered" *ngIf="post?.excerpt.protected"></div>
       <app-metadata-post [authorId]="post?.author" [date]="post?.date" [alignItems]="'center'"></app-metadata-post>
       <app-cloud-tags [tagIds]="post?.tags"></app-cloud-tags>
     </div>
@@ -16,10 +16,10 @@
     <section>
       <app-cloud-categories [categoriesIds]="post?.categories"></app-cloud-categories>
     </section>
-    <section class="mt-5">
+    <!-- <section class="mt-5">
       <h4>Artigos relacionados</h4>
       <app-post-list [relatedPosts]="post?.categories" [postReferenceId]="post?.id"></app-post-list>
-    </section>
+    </section> -->
     <section>
       <app-comment-list [idPost]="post?.id"></app-comment-list>
     </section>

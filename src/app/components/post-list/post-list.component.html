@@ -12,12 +12,12 @@
     <div class="card-body">
       <div class="row">
         <div class="col-xs-12 col-md-12">
-          <h3 (click)="goToArticle(p?.id)">{{ p.title.rendered }}</h3>
+          <h3 (click)="goToArticle(p?.slug)">{{ p.title.rendered }}</h3>
           <app-metadata-post [authorId]="p?.author" [date]="p?.date"></app-metadata-post>
           <div [innerHTML]="p?.excerpt.rendered"></div>
         </div>
         <div class="col-xs-12 col-md-12" [ngClass]="{'hide': !(showButton == i) && display }">
-          <button class="btn btn-danger btn-sm" (click)="goToArticle(p?.id)">Leia mais</button>
+          <button class="btn btn-danger btn-sm" (click)="goToArticle(p?.slug)">Leia mais</button>
         </div>
       </div>
     </div>
