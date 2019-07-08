@@ -26,4 +26,5 @@ export interface PageModel {
   template: string;
   meta: [];
   _links: any;
+  acf: any;
 }
